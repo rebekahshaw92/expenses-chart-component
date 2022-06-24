@@ -1,0 +1,85 @@
+$cream: hsl(27, 66%, 92%);
+$cyan: hsl(186, 34%, 60%);
+$mediumBrown: hsl(28, 10%, 53%);
+$darkBrown: hsl(25, 47%, 15%);
+$veryPaleOrange: hsl(33, 100%, 98%);
+
+body {
+    background-color: $cream;
+}
+
+.cardMain {
+    padding: auto;
+    margin: auto;
+    margin-top: 5%;
+    width: 26rem;
+    border-radius: 20px;
+    background-color: $veryPaleOrange;
+     @include media-breakpoint-up(lg){
+      margin-top: 2%;
+      width: 30rem;
+     }
+}
+
+ #chart {
+     padding: 20px;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto;
+    justify-content: center;
+    align-items:flex-end;
+   // width: 68%;
+   margin-top: 40px;
+    margin-right: 30px;
+   // margin-left: 5px;
+    
+ul {
+    list-style: none !important;
+    margin: -10px !important;
+    
+}
+ }
+
+ .bar {
+   background-color: #ec775f;
+     width: 40px;
+    height: 100%;
+   border-radius: 5px;
+    cursor: pointer;
+       
+    &:hover{
+     opacity:0.7;
+     .amount {
+      visibility: visible;
+    }
+   
+      }
+      @include media-breakpoint-up(lg){
+        width: 50px;
+      }
+    
+  }
+
+.max {
+    background-color: $cyan;
+}
+
+.amount {
+  
+  background: $darkBrown;
+  position: absolute;
+    margin-top: -30px;
+    color: #fff;
+    width: 50px;
+    height: 25px;
+    border-radius: 5px;
+    font-size: 14px;
+    visibility: hidden;
+ }
+
+ .divider {
+   margin-top: 10%;
+   margin-left: 5%;
+   margin-right: 5%;
+   margin-bottom: 5%;
+   border-top:$mediumBrown 1px solid;
+ }
